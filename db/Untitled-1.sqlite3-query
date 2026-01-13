@@ -1,0 +1,23 @@
+-- database: ./todo.db
+
+SELECT * FROM tasks;
+
+CREATE TABLE IF NOT EXISTS test (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    fio TEXT NOT NULL,
+    number INTEGER NOT NULL
+);
+
+
+INSERT INTO test (fio, number) VALUES ('Айдаров Тимур', "080003443");
+
+INSERT INTO test (fio) VALUES ('Айдаров Тимур');
+
+INSERT INTO test (fio, number) VALUES ('Калыпов Аскат', "083403443");
+
+
+SELECT * FROM test;
+
+UPDATE test SET number = 0 WHERE id = 2;
+
+DELETE FROM test WHERE id = 1
